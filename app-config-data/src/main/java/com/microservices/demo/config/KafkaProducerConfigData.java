@@ -8,7 +8,7 @@ import lombok.Data;
 @Configuration
 @ConfigurationProperties(prefix = "kafka-producer-confg")
 @Data
-public class KafkaProducerConfig {
+public class KafkaProducerConfigData {
 	 private String  keySerializerClass;
 	 private String valueSerializerClass;
 	 private String compressionType;
