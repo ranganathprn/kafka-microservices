@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.admin.AdminClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.annotation.EnableRetry;
 
@@ -19,7 +20,8 @@ public class KafkaAdminConfig {
 		super();
 		this.kafkaConfigData = kafkaConfigData;
 	}
-
+	
+	@Bean
 	public AdminClient adminClient() {
 
 		return AdminClient

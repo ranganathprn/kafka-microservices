@@ -15,7 +15,6 @@ import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 @ComponentScan(basePackages = "com.microservices.demo")
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 	
-	TwitterToKafkaServiceConfigData twitterToKafkaServiceConfigData;
 	
 	public static final Logger LOG= LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
 	private final StreamRunner streamRunner;
@@ -33,7 +32,7 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		LOG.info("Application starts....{}", twitterToKafkaServiceConfigData.getWelcomeMessage());
+		LOG.info("Application starts....");
 		streamInitializer.init();
 		streamRunner.start();
 		
