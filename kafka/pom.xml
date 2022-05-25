@@ -9,4 +9,7 @@
 	</parent>
 	<artifactId>kafka</artifactId>
 	<packaging>pom</packaging>
+	<modules>
+		<module>test</module>
+	</modules>
 </project>
